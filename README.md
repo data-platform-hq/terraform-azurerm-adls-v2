@@ -65,14 +65,14 @@ module "adls" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 4.0.1 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 4.0 |
 | <a name="requirement_null"></a> [null](#requirement\_null) | >=3.1.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 4.0.1 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 4.0 |
 | <a name="provider_null"></a> [null](#provider\_null) | >=3.1.1 |
 
 ## Modules
@@ -91,10 +91,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_ace_default"></a> [ace\_default](#input\_ace\_default) | Default ACE values | `list(map(string))` | <pre>[<br>  {<br>    "permissions": "---",<br>    "scope": "access",<br>    "type": "other"<br>  },<br>  {<br>    "permissions": "---",<br>    "scope": "default",<br>    "type": "other"<br>  },<br>  {<br>    "permissions": "rwx",<br>    "scope": "access",<br>    "type": "group"<br>  },<br>  {<br>    "permissions": "rwx",<br>    "scope": "access",<br>    "type": "mask"<br>  },<br>  {<br>    "permissions": "rwx",<br>    "scope": "access",<br>    "type": "user"<br>  },<br>  {<br>    "permissions": "rwx",<br>    "scope": "default",<br>    "type": "group"<br>  },<br>  {<br>    "permissions": "rwx",<br>    "scope": "default",<br>    "type": "mask"<br>  },<br>  {<br>    "permissions": "rwx",<br>    "scope": "default",<br>    "type": "user"<br>  }<br>]</pre> | no |
-| <a name="input_folders_config"></a> [folders\_config](#input\_folders\_config) | List of ADLS folders configuration to create | <pre>list(object({<br>    path        = string<br>    permissions = any<br>  }))</pre> | `[]` | no |
+| <a name="input_ace_default"></a> [ace\_default](#input\_ace\_default) | Default ACE values | `list(map(string))` | <pre>[<br/>  {<br/>    "permissions": "---",<br/>    "scope": "access",<br/>    "type": "other"<br/>  },<br/>  {<br/>    "permissions": "---",<br/>    "scope": "default",<br/>    "type": "other"<br/>  },<br/>  {<br/>    "permissions": "rwx",<br/>    "scope": "access",<br/>    "type": "group"<br/>  },<br/>  {<br/>    "permissions": "rwx",<br/>    "scope": "access",<br/>    "type": "mask"<br/>  },<br/>  {<br/>    "permissions": "rwx",<br/>    "scope": "access",<br/>    "type": "user"<br/>  },<br/>  {<br/>    "permissions": "rwx",<br/>    "scope": "default",<br/>    "type": "group"<br/>  },<br/>  {<br/>    "permissions": "rwx",<br/>    "scope": "default",<br/>    "type": "mask"<br/>  },<br/>  {<br/>    "permissions": "rwx",<br/>    "scope": "default",<br/>    "type": "user"<br/>  }<br/>]</pre> | no |
+| <a name="input_folders_config"></a> [folders\_config](#input\_folders\_config) | List of ADLS folders configuration to create | <pre>list(object({<br/>    path        = string<br/>    permissions = any<br/>  }))</pre> | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of ADLS FS to create | `string` | n/a | yes |
-| <a name="input_permissions"></a> [permissions](#input\_permissions) | List of ADLS FS permissions | `list(map(string))` | <pre>[<br>  {}<br>]</pre> | no |
+| <a name="input_permissions"></a> [permissions](#input\_permissions) | List of ADLS FS permissions | `list(map(string))` | <pre>[<br/>  {}<br/>]</pre> | no |
 | <a name="input_properties"></a> [properties](#input\_properties) | Map of properties | `map(string)` | `{}` | no |
 | <a name="input_storage_account_id"></a> [storage\_account\_id](#input\_storage\_account\_id) | ID of storage account to create ADLS in | `string` | n/a | yes |
 | <a name="input_storage_account_name"></a> [storage\_account\_name](#input\_storage\_account\_name) | Name of storage account to create ADLS in | `string` | n/a | yes |
