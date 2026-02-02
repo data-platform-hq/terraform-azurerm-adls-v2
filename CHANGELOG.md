@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/data-platform-hq/terraform-azurerm-adls-v2/compare/v1.4.0...v1.5.0) (2026-02-02)
+
+
+### Features
+
+* upgrade provider to AzureRM v4.0 ([2cf3a2a](https://github.com/data-platform-hq/terraform-azurerm-adls-v2/commit/2cf3a2af2bb076a37cff3737c703c002281245d6))
+
 # [1.4.0](https://github.com/data-platform-hq/terraform-azurerm-adls-v2/compare/v1.3.0...v1.4.0) (2024-09-10)
 
 
